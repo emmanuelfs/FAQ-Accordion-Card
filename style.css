@@ -1,0 +1,148 @@
+:root{
+    --text-header: hsl(237, 12%, 33%);
+    --text-general: hsl(240, 6%, 50%);
+    --hr: hsl(240, 5%, 91%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: rgb(175,103,233);
+    background: linear-gradient(180deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+}
+hr{
+    border: none;
+    border-top: 1px solid var(--hr);
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flexColumn{
+    flex-direction: column;
+    justify-content: space-around;
+}
+.imageTop{
+    position: relative;
+    margin-top: -32%;
+    max-height: 20%;
+}
+.shadow{
+    position: relative;
+    top: -70%;
+}
+h1{
+    font-size: 3em;
+    font-weight: 700;
+    color:var(--text-header)
+}
+p{
+    font-weight: 400;
+    color:var(--text-general)
+}
+.card{
+    height: 75vh;
+    width: 90vw;
+    margin:10em auto 0;
+    background-color: white;
+    border-radius: 1.5em;
+}
+.cardContainer{
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    position: relative;
+    padding-top: 5em;
+}
+.actualFAQ{
+    width: 100%;
+}
+.spacer{
+    height: 1%;
+}
+.question{
+    width: 100%;    
+    line-height: 4;
+}
+.hidden{
+    display: none;
+    
+    transition: all .5s ease-in;
+}
+.bold{
+    font-weight: bolder;
+}
+.answer{
+    transition: all .5s ease-in;
+    margin: 1em 0;
+}
+.show{
+    display: block;
+    transition: all .5s ease-in;
+}
+.arrow{
+    transition: all .5s;
+}
+.turnArrow{
+    transition: all .5s;
+    transform: rotate(180deg);
+}
+@media (min-width: 800px){
+    .card{
+        overflow: hidden;
+        flex-direction: row;
+        width: 70vw;
+        display: flex;
+        margin: auto;
+    }
+    .cardContainer{
+        width: 40%;
+        height: 95%;
+        margin: 0 0 0 -20em;
+        padding: 0;
+        justify-content: space-around;
+    }
+    .divSpacer{
+        display: none;
+    }
+    body{
+        font-size: 16px;
+    }
+    h1{
+        width: 100%;
+    }
+    .imageTop{
+        position: relative;
+        left: -20%;
+        height: 20%;
+        width: 50%;
+        z-index: 1;
+    }
+    .background{
+        width: 100%;
+    }
+    .shadow{
+        position: absolute;;
+        top: -300%;
+        left: -85%;
+        z-index: -1;      
+    }
+    .box{
+        position: absolute;
+        width: 15%;
+        left: 6%;
+        top: 35%;
+        z-index: 2;
+    }
+}
